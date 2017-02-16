@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216081926) do
+ActiveRecord::Schema.define(version: 20170216201701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,20 +23,28 @@ ActiveRecord::Schema.define(version: 20170216081926) do
     t.integer "rating"
   end
 
-  create_table "category", force: :cascade do |t|
-    t.string "cat_name"
+  create_table "categories", force: :cascade do |t|
+    t.string  "cat_name"
+    t.integer "subcategories_id"
   end
+
+  add_index "categories", ["subcategories_id"], name: "index_categories_on_subcategories_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "location"
-    t.string "skills"
-    t.text   "description"
-    t.date   "start_date"
-    t.date   "end_date"
+    t.string  "title"
+    t.string  "location"
+    t.string  "skills"
+    t.text    "description"
+    t.date    "start_date"
+    t.date    "end_date"
+    t.integer "categories_id"
+    t.integer "agencies_id"
   end
 
-  create_table "sub_category", force: :cascade do |t|
+  add_index "posts", ["agencies_id"], name: "index_posts_on_agencies_id", using: :btree
+  add_index "posts", ["categories_id"], name: "index_posts_on_categories_id", using: :btree
+
+  create_table "subcategories", force: :cascade do |t|
     t.string "subcat_name"
   end
 
