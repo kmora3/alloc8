@@ -6,6 +6,9 @@ gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
+#user auth
+gem 'devise'
+
 gem 'sass-rails', '~> 5.0'
 # Sass rails
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -27,8 +30,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-#user auth
-gem 'devise'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
