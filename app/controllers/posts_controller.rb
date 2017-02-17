@@ -13,9 +13,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:success] = "Post Saved!"
+      redirect_to @post
     else
       flash[:alert] = "Post not Saved!"
-      redirect_to @post
     end
   end
 

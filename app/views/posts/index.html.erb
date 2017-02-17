@@ -14,13 +14,14 @@
     <div class="row">
           <% @posts.each do |c| %>
           <div class="feature__body boxed boxed--border">
-            <span><b>Title: <%=link_to c.title, c %><br></b></span>
-            <span><b>Agency: <%= c.agencies_id%><br></b></span>
-            <span><b>Location: <%= c.location%></b></span>
-            <span><b><br>Skills: <%= c.skills%></b></span>
-            <span><b><br>Description: <%= c.description%></b></span>
-            <span><b><br>Start Date: <%= c.start_date%></b></span>
-            <span><b><br>End Date: <%= c.end_date%></b></span><br><br>
+            <span><b>Title: <span class="post-form"><%=c.title%></span><br></b></span>
+            <span><b>Category: <span class="post-form"><%= c.categories_id %></span><br></b></span>
+            <span><b>Agency: <span class="post-form"><%= c.agencies_id%></span><br></b></span>
+            <span><b>Location: <span class="post-form"><%= c.location%></span></b></span>
+            <span><b><br>Skills: <span class="post-form"><%= c.skills%></span></b></span>
+            <span><b><br>Description: <span class="post-form"><%= c.description%></span></b></span>
+            <span><b><br>Start Date:<span class="post-form"> <%= c.start_date%></span></b></span>
+            <span><b><br>End Date: <span class="post-form"><%= c.end_date%></span></b></span><br><br>
 
             <a href="#">
               Read More

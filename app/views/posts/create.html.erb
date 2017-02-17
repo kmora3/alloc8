@@ -14,7 +14,8 @@
     <div class="row">
           <% @posts.each do |c| %>
           <div class="feature__body boxed boxed--border">
-            <span><b>Title: <%=link_to c.title, c %><br></b></span>
+            <<span><b>Title: <span class="post-form"><%=c.title%></span><br></b></span>
+            <span><b>Category: <%= c.categories_id %><br></b></span>
             <span><b>Agency: <%= c.agencies_id%><br></b></span>
             <span><b>Location: <%= c.location%></b></span>
             <span><b><br>Skills: <%= c.skills%></b></span>
