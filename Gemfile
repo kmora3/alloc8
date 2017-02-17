@@ -9,6 +9,7 @@ gem 'pg', '~> 0.15'
 #user auth
 gem 'devise'
 
+gem 'bootstrap_form'
 gem 'sass-rails', '~> 5.0'
 # Sass rails
 gem 'bootstrap-sass', '~> 3.3.6'
