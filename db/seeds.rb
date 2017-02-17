@@ -10,3 +10,9 @@
 # Agency.create(name: 'Sparks & Honey', zipcode: '90006')
 # Agency.create(name: 'TBWA', zipcode: '10022')
 # Agency.create(name: 'Digital Arts Network', zipcode: '10022')
+# Agency.create(name: 'Creative Channel Services', zipcode: '90006')
+# Agency.create(name: 'TPN', zipcode: '90006')
+
+Category.create(cat_name: 'Technology')
+Category.create(cat_name: 'Analytics')
+Category.create(cat_name: 'Design')

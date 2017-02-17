@@ -15,13 +15,13 @@
         <% Category.all.each do |category| %>
         <div class="col-sm-4">
 						<article class="feature feature-1">
-								<img alt="Image" src="img/blog-3.jpg">
-							</a>
-							<div class="feature__body boxed boxed--border">
+								<img alt="Image" src="img/technology.jpg" src="img/analytics.jpg" src="img/technology.jpg">
+							<div class="feature__body boxed boxed-border">
 
 								<h5 style="text-align: center; font-size: 30px;"><%=link_to category.cat_name, category_path(category) %></h5>
 
 							</div>
 						</article>
 					</div>
+
           <%end%>

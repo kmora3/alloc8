@@ -15,8 +15,8 @@
 
           <div class="feature__body boxed boxed--border">
             <span><b>Title:<span class="post-form"> <%= @post.title %></span><br></span>
-            <span><b>Category:<span class="post-form"> <%= @post.categories_id %></span><br></b></span>
-            <span><b>Agency:<span class="post-form"> <%= @post.agencies_id %></span><br></b></span>
+            <span><b>Category:<span class="post-form"> <%= @post.category.cat_name %></span><br></b></span>
+            <span><b>Agency:<span class="post-form"> <%= @post.agency.name %></span><br></b></span>
             <span><b>Location:<span class="post-form"> <%= @post.location %></span><br></b></span>
             <span><b>Skills: <span class="post-form"><%= @post.skills %></span><br></b></span>
             <span><b>Description: <span class="post-form"><%= @post.description %></span><br></b></span>

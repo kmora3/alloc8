@@ -15,17 +15,17 @@
           <% @posts.each do |c| %>
           <div class="feature__body boxed boxed--border">
             <span><b>Title: <span class="post-form"><%=c.title%></span><br></b></span>
-            <span><b>Category: <span class="post-form"><%= c.categories_id %></span><br></b></span>
-            <span><b>Agency: <span class="post-form"><%= c.agencies_id%></span><br></b></span>
+            <span><b>Category: <span class="post-form"><%= c.category_id %></span><br></b></span>
+            <span><b>Agency: <span class="post-form"><%= c.agency_id%></span><br></b></span>
             <span><b>Location: <span class="post-form"><%= c.location%></span></b></span>
             <span><b><br>Skills: <span class="post-form"><%= c.skills%></span></b></span>
             <span><b><br>Description: <span class="post-form"><%= c.description%></span></b></span>
             <span><b><br>Start Date:<span class="post-form"> <%= c.start_date%></span></b></span>
             <span><b><br>End Date: <span class="post-form"><%= c.end_date%></span></b></span><br><br>
+            <%= link_to 'Edit', [:edit, c] %>
 
-            <a href="#">
-              Read More
-            </a>
+
+            <button class="btn btn-md" ><%= mail_to  "Contact Agency" %></button>
           </div>
             <%end%>
     </div>
