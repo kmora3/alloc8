@@ -8,8 +8,6 @@
 
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
   <%= render 'partials/nav' %>
   <% flash.each do |key, value| %>
   <div class="alert alert-<%= key %>">
@@ -24,8 +22,6 @@
 
   <%= yield %>
 
-<div class="container" style="width: auto;">
   <%= render 'partials/footer' %>
-</div>å
 </body>
 </html>

@@ -11,6 +11,7 @@ class PostsController < ApplicationController
    else
      flash[:danger] = @post.errors.full_message.to_sentence
      render 'new'
+    end
   end
 
   def show
