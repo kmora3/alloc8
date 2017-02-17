@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  belongs_to :agencies
+  belongs_to :agency
   belongs_to :category
   belongs_to :sub_category
   validates_presence_of :title
