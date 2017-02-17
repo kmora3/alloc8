@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 
-  belongs_to :agency
+  belongs_to :agencies
   belongs_to :category
   belongs_to :sub_category
   validates_presence_of :title
@@ -9,7 +9,5 @@ class Post < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :start_date
   validates_presence_of :end_date
-  validates_presence_of :categories_id
-  validates_presence_of :agencies_id
-  
+
 end
